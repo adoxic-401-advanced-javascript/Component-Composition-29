@@ -5,7 +5,7 @@ export default class Gifs extends Component {
 
   state = {
     number: 10,
-    gif: []
+    image: []
   }
 
   render() {
@@ -21,7 +21,7 @@ export default class Gifs extends Component {
           <button>Submit</button>
         </form>
         <Deck title="Gifs">
-          {this.state.gifs}
+          {this.state.image}
         </Deck>
       </>
     );
@@ -37,14 +37,15 @@ export default class Gifs extends Component {
   }
 
   componentDidMount() {
-    this.apiCall();
+    this.apiCall()
   }
 
   apiCall = () => {
     return fetch(`https://hey-arnold-api.herokuapp.com/api/v1/gifs/random?count=${this.state.number}`)
       .then(res => res.json())
-      .then(({gifLink}) => {
-        this.setState({ gifLink }); 
+      .then((image) => {
+        console.log(image);
+        this.setState({ image }); 
       });
   }
 }
