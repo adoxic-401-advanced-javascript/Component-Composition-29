@@ -1,11 +1,11 @@
 import React from 'react';
 import { gifs } from '../content.json';
-import DeckOfCards from './DeckOfCards';
+import Characters from '../containers/Chararcters';
 
 export default function App() {
   return (
     <>
-      <DeckOfCards />
+      <Characters />
       <section>
         {gifs.map(({ _id, image }) => (
           <div key={_id}>

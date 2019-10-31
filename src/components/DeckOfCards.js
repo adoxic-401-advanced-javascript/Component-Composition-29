@@ -1,12 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Deck from './Deck';
-import { characters } from '../content.json';
 
-
-
-const DeckOfCards = () => {
-
+const DeckOfCards = ({ characters }) => {
+  
   return (
     <>
       <Deck>
