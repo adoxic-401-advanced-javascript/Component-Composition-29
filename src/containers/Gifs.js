@@ -37,14 +37,13 @@ export default class Gifs extends Component {
   }
 
   componentDidMount() {
-    this.apiCall()
+    this.apiCall();
   }
 
   apiCall = () => {
     return fetch(`https://hey-arnold-api.herokuapp.com/api/v1/gifs/random?count=${this.state.number}`)
       .then(res => res.json())
       .then((image) => {
-        console.log(image);
         this.setState({ image }); 
       });
   }
