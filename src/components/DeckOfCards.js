@@ -2,19 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Deck from './Deck';
 
-const DeckOfCards = ({ characters }) => {
-  
+const DeckOfCards = ({ items, title }) => {
   return (
     <>
-      <Deck>
-        {characters}
+      <Deck title={title}>
+        {items}
       </Deck>
     </>
   );
 };
 
 DeckOfCards.propTypes = {
-  characters: PropTypes.array.isRequired
+  items: PropTypes.array.isRequired,
+  title: PropTypes.string
 };
 
 export default DeckOfCards;

@@ -17,19 +17,22 @@ export default class Characters extends Component {
 
   render() {
     return (
-      <DeckOfCards characters={this.state.characters}/>
-    )
+      <DeckOfCards 
+        items={this.state.characters}
+        title="Characters"/>
+    );
   }
 
   componentDidMount() {
-      this.apiCall().then(characters => {
-      this.setState({characters}); 
-    })
+    this.apiCall();
   }
 
   apiCall = () => {
     return fetch(`https://hey-arnold-api.herokuapp.com/api/v1/characters?perPage=${this.props.count}`)
       .then(res => res.json())
+      .then(characters => {
+        this.setState({ characters }); 
+      });
 
   }
 }

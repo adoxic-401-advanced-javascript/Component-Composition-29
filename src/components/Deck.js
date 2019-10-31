@@ -3,8 +3,7 @@ import Card from './Card';
 import PropTypes from 'prop-types';
 
 
-const Deck = ({ children }) => {
-  const title = 'characters';
+const Deck = ({ children, title }) => {
   return (
     <section>
       {title &&
@@ -20,11 +19,8 @@ const Deck = ({ children }) => {
 };
 
 Deck.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.shape({
-    _id: PropTypes.string.isRequired,
-    name: PropTypes.string,
-    image: PropTypes.string
-  })).isRequired
+  children: PropTypes.array.isRequired,
+  title: PropTypes.string
 };
 
 export default Deck;
