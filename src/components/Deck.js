@@ -1,18 +1,30 @@
 import React from 'react';
 import Card from './Card';
-import { characters } from '../content.json';
+import PropTypes from 'prop-types';
 
-const Deck = () => {
-  const title = characters;
+
+const Deck = ({ children }) => {
+  const title = 'characters';
   return (
-  <section>
+    <section>
+      {title &&
       <header>
-        <h2>Characters</h2>
-      </header>
-      <Card characters={characters}/>
+        <h2>{title}</h2>
+      </header>}
+      <Card>
+        {children}
+      </Card>
     </section>
     
   );
-}
+};
+
+Deck.propTypes = {
+  children: PropTypes.arrayOf(PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+    name: PropTypes.string,
+    image: PropTypes.string
+  })).isRequired
+};
 
 export default Deck;
