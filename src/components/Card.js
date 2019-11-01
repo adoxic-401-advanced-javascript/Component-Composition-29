@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 
 
 const Card = ({ children }) => {
- 
   return (
     <>
       {children.map(({ _id, name, image, gifLink }) => (
         <div key={_id}>
           {name && <header><h3>{name}</h3></header>}
-          {image && <figure>
+          {image && name && <figure>
             <img src={image} alt={name} />
           </figure>}
           {gifLink && <figure>

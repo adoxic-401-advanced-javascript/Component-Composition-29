@@ -4,8 +4,9 @@ import DeckOfCards from './DeckOfCards';
 
 describe('DeckOfCards component', () => {
   it('renders DeckOfCards', () => {
-    const children = [{ id: 'some stuff' }];
-    const wrapper = shallow(<DeckOfCards> {children} </DeckOfCards>);
+    const items = [{ id: 'some stuff' }];
+   
+    const wrapper = shallow(<DeckOfCards items={items} title='string'/>);
     expect(wrapper).toMatchSnapshot();
   });
 });

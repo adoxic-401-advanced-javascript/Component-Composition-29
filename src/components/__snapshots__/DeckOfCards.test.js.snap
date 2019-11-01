@@ -2,6 +2,10 @@
 
 exports[`DeckOfCards component renders DeckOfCards 1`] = `
 <Fragment>
-  <Deck />
+  <Deck
+    title="string"
+  >
+    <Component />
+  </Deck>
 </Fragment>
 `;

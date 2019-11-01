@@ -2,12 +2,13 @@
 
 exports[`Deck component renders Deck 1`] = `
 <section>
+  <header>
+    <h2>
+      hello
+    </h2>
+  </header>
   <Card>
-     
-    <Component
-      key="thing"
-    />
-     
+    <Component />
   </Card>
 </section>
 `;

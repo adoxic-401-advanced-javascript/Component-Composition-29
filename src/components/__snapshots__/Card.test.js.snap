@@ -2,8 +2,25 @@
 
 exports[`Card component renders Card 1`] = `
 <Fragment>
-  <div />
-  <div />
-  <div />
+  <div
+    key="some stuff"
+  >
+    <header>
+      <h3>
+        string
+      </h3>
+    </header>
+    <figure>
+      <img
+        alt="string"
+        src="string"
+      />
+    </figure>
+    <p>
+      string
+       has 
+      some stuff
+    </p>
+  </div>
 </Fragment>
 `;
