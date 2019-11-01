@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gifs container renders Gif component 1`] = `
+<Fragment>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      name="number"
+      onChange={[Function]}
+      type="number"
+      value={10}
+    />
+    <button>
+      Submit
+    </button>
+  </form>
+  <Deck
+    title="Gifs"
+  />
+</Fragment>
+`;
