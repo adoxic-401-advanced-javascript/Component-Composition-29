@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Characters container renders Character component 1`] = `
+<DeckOfCards
+  items={Array []}
+  title="Characters"
+/>
+`;
